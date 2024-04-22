@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Добро пожаловать</title>
+    
+</head>
+<script>
+  function redirectToRegistration() {
+    window.location.href = "reggg.html";
+  }
+  function validateForm() {
+    var x = document.forms["myForm"]["login"].value;
+    var y = document.forms["myForm"]["password"].value;
+    if (x == "" || y == "") {
+        alert("Введите данные");
+        return false;
+    }
+  }
+</script>
+
+<body>
+    <h1>Добро пожаловать </h1>
+    <p>войдите в учетную запись</p>
+    <form name="myForm" action="next.html" method="post" onsubmit="return validateForm()">
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login"><br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">войти</button>
+        <button type="button" onclick="redirectToRegistration()">Зарегистрироваться</button>
+        
+        
+
+    </form>
+</body>
+</html>
+
+
+
